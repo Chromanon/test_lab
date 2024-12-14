@@ -29,9 +29,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SquareActivity::class.java))
         }
 
-//        rectangleButton.setOnClickListener {
-//            startActivity(Intent(this, RectangleActivity::class.java))
-//        }
+        rectangleButton.setOnClickListener {
+            startActivity(Intent(this, RectangleActivity::class.java))
+        }
 
         circleButton.setOnClickListener {
             startActivity(Intent(this, CircleActivity::class.java))
