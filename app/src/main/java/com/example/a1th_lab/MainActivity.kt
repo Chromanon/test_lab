@@ -25,13 +25,13 @@ class MainActivity : AppCompatActivity() {
         val rectangleButton = findViewById<Button>(R.id.btn_rectangle)
         val circleButton = findViewById<Button>(R.id.btn_circle)
 
-//        squareButton.setOnClickListener {
-//            startActivity(Intent(this, SquareActivity::class.java))
-//        }
-
-        rectangleButton.setOnClickListener {
-            startActivity(Intent(this, RectangleActivity::class.java))
+        squareButton.setOnClickListener {
+            startActivity(Intent(this, SquareActivity::class.java))
         }
+
+//        rectangleButton.setOnClickListener {
+//            startActivity(Intent(this, RectangleActivity::class.java))
+//        }
 
         circleButton.setOnClickListener {
             startActivity(Intent(this, CircleActivity::class.java))
