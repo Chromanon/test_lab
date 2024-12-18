@@ -24,17 +24,19 @@ class MainActivity : AppCompatActivity() {
         val squareButton = findViewById<Button>(R.id.btn_square)
         val rectangleButton = findViewById<Button>(R.id.btn_rectangle)
         val circleButton = findViewById<Button>(R.id.btn_circle)
+        val socialMediaButton = findViewById<Button>(R.id.social_media)
 
         squareButton.setOnClickListener {
             startActivity(Intent(this, SquareActivity::class.java))
         }
-
         rectangleButton.setOnClickListener {
             startActivity(Intent(this, RectangleActivity::class.java))
         }
-
         circleButton.setOnClickListener {
             startActivity(Intent(this, CircleActivity::class.java))
+        }
+        socialMediaButton.setOnClickListener {
+            startActivity(Intent(this, SocialActivity::class.java))
         }
     }
 }

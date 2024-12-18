@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/purple_200">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true">
+
+            <EditText
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luke Skywalker"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:focusable="false"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Edit"
+                android:layout_marginStart="8dp" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                android:layout_marginStart="8dp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/largePhoto"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:contentDescription="Large photo"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shutrm" />
+
+        <Button
+            android:id="@+id/selectPhotoButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Photo"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/userNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yoda"
+            android:textSize="20sp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/userLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Galactic Republic, Republic City"
+            android:layout_marginTop="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/interestsLayout"
+            android:layout_width="218dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- Іконки інтересів -->
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Data science"
+                android:src="@drawable/ds" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Surfing"
+                android:src="@drawable/surf" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Mobile"
+                android:src="@drawable/mobile" />
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Sports"
+                android:src="@drawable/pl" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/friendsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Друзі Тимофія"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/friendsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Кількість друзів: 150"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Список 5 друзів -->
+        <LinearLayout
+            android:id="@+id/friendsList"
+            android:layout_width="262dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical">
+
+            <!-- Друзі -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Барбацуца Олег Петрович" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Дюк Остап Петрович" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Павел Санич" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4. Паукач Ярослав Юрійович" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5. Оксана" />
+        </LinearLayout>
+
+        <!-- Кнопки внизу -->
+        <LinearLayout
+            android:layout_width="236dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Settings"
+                android:src="@drawable/sett" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="Menu"
+                android:src="@drawable/menu" />
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Search"
+                android:src="@drawable/search" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Прозорий фон для перехоплення кліків -->
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true" />
+
+</FrameLayout>
